@@ -66,3 +66,18 @@ void Menu(){
 				flat=0;		
 		}
 	}
+void  timkiemSinhvienTheotinh(Sinhvien *sv, int soluong){
+	char tentinh[20];
+	printf("\nNhap ten tinh: ");
+	fflush(stdin);
+	gets(tentinh);
+	int tim=0;
+	for(int i=0; i<soluong; i++){
+		if(strcmp(tentinh, ((sv+i)->Noisinh))==0){
+			hienthiThongtin(sv+i, 1);
+			tim = 1;
+			}
+	}
+	if(tim == 0){
+		printf("\nKhong tim thay sinh vien theo tinh %s nhu yeu cau.", tentinh);
+	}}
